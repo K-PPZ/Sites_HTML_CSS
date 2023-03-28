@@ -3,17 +3,36 @@ body {
     align-items: center;
     flex-direction: column;
     height: 100vh;
-    margin: 0 auto;
+    margin: 0;
     background-color: #565A5D;
     color: white;
+
+    & h1 {
+        font-size: 4em;
+    }
 
     & h2 {
         text-transform: uppercase;
         font-family: 'Amatic SC', cursive;
+        word-spacing : 25px;
+        font-size: 2.5em;
+        margin-bottom: 0;
+    }
+
+    & h3 {
+        font-size: 1.5em;
+        word-spacing: 10px;
+        margin-bottom: -15px;
     }
 
     & p {
         font-family: 'Roboto', sans-serif;
+        font-size: 17px;
+        line-height: 50px;
+    }
+
+    & span {
+        font-style: italic;
     }
 }
 
@@ -28,15 +47,65 @@ header {
     font-family: 'Amatic SC', cursive;
     background-size: 25%;
     width: 95%;
-    // height: 30%;
+    height: 30%;
+    padding: 2%;
 }
 
 main {
+    display: flex;
+    flex-direction: column;
     width: 50%;
-    height: 10%;
+
+    & #citation {
+        font-style: italic;
+        font-size: 20px;
+        width: 100%;
+        margin-top: 70px;
+
+        & p {
+            font-size: 30px;
+            text-align: center;
+        }
+
+        & #auteur {
+            text-align: end;
+            font-size: 20px;
+        }
+    }
+
+    & #miku {
+        color: #5BC6C3;
+        font-style: normal;
+    }
 }
 
 footer {
-    height: 10%;
+    height: 30%;
     width: 90%;
+    padding: 1%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+
+    & img {
+        width: 10%;
+    }
+
+    & span {
+        color: white;
+    }
+
+    & a {
+        color: #5BC6C3;
+        text-decoration: none;
+        font-family: 'Roboto', sans-serif;
+        font-size: 15px;
+    }
+
+    & small {
+        font-size: 15px;
+        font-family: 'Roboto', sans-serif;
+    }
 }

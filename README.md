@@ -28,7 +28,7 @@ copyright Eden School
 Source : Extrait de l'article - Le Web donne sa langue aux chats par Erwan Cario et Camille Gévaudan - Liberation
 
 
-Liens : 
+Liens :
 https://fr.wikipedia.org/wiki/Hatsune_Miku
 https://www.liberation.fr/ecrans/2011/12/06/le-web-donne-sa-langue-aux-chats_950376?page=article
 
