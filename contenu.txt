@@ -15,20 +15,16 @@ iCloud ou encore, plus problématique, de Dropbox où 7 millions
 d’identifiants et mots de passe ont été récupérés. Un piratage de
 données consiste généralement par trouver les accès (identifiants,
 noms d’utilisateurs et mots de passe) puis à les diffuser à des sites peu
-fiables ou sur des réseaux sociaux pour en faire une utilisation
-
-malsaine.
+fiables ou sur des réseaux sociaux pour en faire une utilisation malsaine.
 
 Les erreurs humaines et défaillances techniques sont aussi des sources
 importantes de pertes de données. La question n’est plus de savoir
 pourquoi sauvegarder mais comment faut-il s’y prendre.
 
 Nous allons aborder deux types de sauvegarde qui diffèrent en fonction
-
 de leurs fichiers et des besoins de l’utilisateur.
-NO BACKUP, NO
 
-MERCY
+NO BACKUP, NO MERCY
 
 Locale
 
