@@ -1,35 +1,52 @@
-body {
-    // height: 100vh;
-    margin: 0;
+$titre_nav: 'Comic Neue', cursive;
+$texte: 'Baloo Chettan 2', cursive;
+
+$bg_orange: #FA9100;
+$border_color: #FECB41;
+
+@mixin center ($flex_direction: column) {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    flex-direction: $flex_direction;
+}
+
+
+// NORMALISE //
+
+h1, h2, h3, nav { font-family: $titre_nav; }
+
+p { font-family: $texte; }
+
+* { box-sizing: border-box; }
+
+// NORMALISE //
+
+
+
+body {
+    // height: 100vh;
+    margin: 0;
+    @include center();
 
     & header {
+        @include center();
         margin-top: 100px;
-        background-color: #FA9100;
-        border-top: 4px solid #FECB41;
-        border-bottom: 4px solid #FECB41;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        background-color: $bg_orange;
+        border-top: 4px solid $border_color;
+        border-bottom: 4px solid $border_color;
         height: 30%;
         width: 100%;
-        flex-direction: column;
         margin-bottom: 100px;
 
         & img {
             width: 5%;
-            margin-top: -30px;
+            margin-top: -55px;
         }
 
         & nav {
             width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-family: 'Comic Neue', cursive;
+            @include center(row);
 
             & ul {
                 display: flex;
@@ -38,9 +55,7 @@ body {
 
                 & li {
                     list-style: none;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
+                    @include center(row);
                     margin: 0;
                     width: 20%;
     
@@ -58,23 +73,17 @@ body {
 
 
     & main {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
+        @include center();
         width: 100%;
         height: 70%;
 
         & #video {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
+            @include center();
             width: 50%;
+            margin-bottom: 30px;
 
             & h1 {
                 color: #424953;
-                font-family: 'Comic Neue', cursive;
                 font-size: 2.5em;
                 text-align: center;
                 text-transform: uppercase;
@@ -87,13 +96,12 @@ body {
 
             & p {
                 text-align: center;
-                font-family: 'Baloo Chettan 2', cursive;
                 margin-top: -5px;
             }
         }
         
         & #news {
-            width: 50%;
+            width: 70%;
             height: 40%;
             display: flex;
             justify-content: space-around;
@@ -113,47 +121,125 @@ body {
                 width: 70%;
                 height: 100%;
                 background-color: #E9E9E9;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
+                padding: 2%;
+                @include center();
 
                 & h2 {
-                    font-family: 'Comic Neue', cursive;
                     text-transform: uppercase;
+                    font-size: 40px;
+                    color: #333333;
 
                     & span {
-                        color: #FA9100;
+                        color: $bg_orange;
                     }
                 }
 
                 & article {
-                    width: 30%;
+                    width: 40%;
+                    color: #424953;
+                    text-align: end;
+                    margin-bottom: 50px;
+
+                    & h3 {
+                        text-align: center;
+                        color: #333333;
+                        font-size: 20px;
+                    }
+
+                    & img {
+                        float: left;
+                        width: 60%;
+                        border-radius: 20px;
+                        margin-right: 10px;
+                    }
+
+                    & p {
+                        width: 100%;
+                        text-align: left;
+                        margin-bottom: 10px;
+                        font-size: 1em;
+                    }
+
+                    & li {
+                        font-family: $texte;
+                        text-align: left;
+                        font-size: 1em;
+                    }
+
+                    & button {
+                        background-color: #333333;
+                        border: none;
+                        color: white;
+                        padding: 2% 4%;
+                        font-family: $texte;
+                        font-size: 17px;
+                        cursor: pointer;
+                        margin-top: 20px;
+
+                        & i {
+                            margin-left: 10px;
+                        }
+                    }
                 }
             }
 
             & #section_data {
-                width: 30%;
+                width: 25%;
                 height: 100%;
-                padding: 1%;
-                background-color: #FA9100;
-                border: 4px solid #FECB41;
-                margin-left: 20px;
+                padding: 2%;
+                background-color: $bg_orange;
+                border: 4px solid $border_color;
                 color: white;
+                font-size: 14px;
 
                 & h2 {
-                    font-family: 'Comic Neue', cursive;
                     text-transform: uppercase;
+                    font-size: 2em;
 
                     & span {
                         color: #424953;
                     }
+                }
+
+                & h3 {
+                    font-size: 25px;
+                    margin-bottom: -5px;
+                    color: #333333;
+                }
+
+                & p {
+                    font-size: 1em;
                 }
             }
         }
     }
 
     & footer {
+        margin-top: 50px;
         height: 10%;
+        background-color: #333333;
+        width: 100%;
+        color: white;
+        @include center();
+        padding: 1% 0;
+
+        & img {
+            width: 7%;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        & small {
+            font-size: 100%;
+            font-family: $texte;
+        }
+
+        & p {
+
+            & a {
+                color: white;
+                text-decoration: none;
+            }
+        }
     }
 }
