@@ -147,7 +147,7 @@
                 <h2><span>Pour valider votre réservation,</span> compléter ce formulaire</h2>
 
                 <form action="#">
-                    <fieldset>
+                    <fieldset id="coordonnee">
                         <legend>Vos coordonnées</legend>
 
                         <div>
@@ -185,25 +185,31 @@
                         </div>
                     </fieldset>
 
-                    <fieldset>
+                    <fieldset id="fidelite">
                         <legend>Voulez-vous souscrire à notre programme de fidélité ?</legend>
 
                         <div>
                             <label for="yes">Oui</label>
-                            <input type="button" value="yes">
+                            <input type="radio" name="yes_no" id="yes">
                         </div>
 
                         <div>
                             <label for="no">Non</label>
-                            <input type="button" value="no">
+                            <input type="radio" name="yes_no" id="no">
                         </div>
                     </fieldset>
 
-                    <fieldset>
+                    <fieldset id="ila">
                         <legend>Comment avez-vous connu Ila Yoga ?</legend>
 
-                        
+                        <select name="internet" id="internet">
+                            <option value="">Par internet</option>
+                            <option value="mobile">mobile</option>
+                            <option value="desktop">desktop</option>
+                        </select>
                     </fieldset>
+
+                    <button type="submit">Envoyer</button>
                 </form>
             </section>
         </main>
