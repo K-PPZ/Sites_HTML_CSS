@@ -1,0 +1,20 @@
+$titre: 'Coda Caption', sans-serif;
+$nav: 'Norican', cursive;
+$texte: 'PT Sans', sans-serif;
+
+@mixin centrer ($justify: center, $direction: column) {
+    display: flex;
+    justify-content: $justify;
+    align-items: center;
+    flex-direction: $direction;
+}
+
+// NORMALISE //
+
+nav { font-family: $nav; }
+
+p { font-family: $texte; }
+
+* { box-sizing: border-box; }
+
+// NORMALISE //
