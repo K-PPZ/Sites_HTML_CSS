@@ -1,6 +1,6 @@
-$titre: 'Coda Caption', sans-serif;
-$nav: 'Norican', cursive;
-$texte: 'PT Sans', sans-serif;
+$titre: 'Coiny', cursive;
+$texte_nav: 'Roboto', sans-serif;
+$red: #F7073B;
 
 @mixin centrer ($justify: center, $direction: column) {
     display: flex;
@@ -11,10 +11,113 @@ $texte: 'PT Sans', sans-serif;
 
 // NORMALISE //
 
-nav { font-family: $nav; }
+h1 { font-family: $titre; }
 
-p { font-family: $texte; }
+p, nav { font-family: $texte_nav; }
 
 * { box-sizing: border-box; }
 
 // NORMALISE //
+
+
+
+
+body {
+    height: 100vh;
+    margin: 0;
+    @include centrer(start, column);
+    background-image: url(../img/bg.jpg);
+
+    & header {
+        @include centrer();
+        background-repeat: no-repeat;
+        width: 100%;
+        margin-bottom: 50px;
+
+        & img {
+            width: 20%;
+        }
+
+        & h1 {
+            color: $red;
+            margin: 0;
+        }
+
+        & nav {
+            background-color: $red;
+            width: 100%;
+            color: white;
+            @include centrer();
+            font-family: $texte_nav;
+
+            & ul {
+                @include centrer(space-evenly, row);
+                width: 35%;
+
+                & li {
+                    list-style: none;
+                }
+            }
+        }
+    }
+
+    & main {
+        width: 100%;
+        @include centrer();
+        font-family: $texte_nav;
+        margin-bottom: 50px;
+
+        & section {
+            width: 100%;
+            @include centrer();
+
+            & article {
+                width: 60%;
+                @include centrer();
+
+                & h2 {
+                    color: #313432;
+                    font-size: 45px;
+                    text-align: center;
+                    width: 50%;
+                    font-family: $titre;
+                    line-height: 1;
+                    margin: 10px;
+                }
+
+                & img {
+                    width: 100%;
+                    margin-bottom: 10px;
+                }
+
+                & p {
+                    line-height: 2;
+                    font-family: $texte_nav;
+                }
+            }
+        }
+    }
+
+    & footer {
+        background-color: #1A1A1A;
+        width: 100%;
+        @include centrer();
+        color: white;
+        font-family: $texte_nav;
+        padding: 2% 0;
+
+        & img {
+            width: 7%;
+            margin-bottom: 5px;
+        }
+
+        & small {
+            font-size: 15px;
+        }
+
+        & p {
+            margin: 0;
+            font-size: 15px;
+        }
+    }
+}
