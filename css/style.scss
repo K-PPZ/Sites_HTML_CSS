@@ -46,9 +46,7 @@ body {
         & nav {
             background-color: $red;
             width: 100%;
-            color: white;
             @include centrer();
-            font-family: $texte_nav;
 
             & ul {
                 @include centrer(space-evenly, row);
@@ -56,6 +54,12 @@ body {
 
                 & li {
                     list-style: none;
+
+                    & a {
+                        text-decoration: none;
+                        color: white;
+                        font-family: $texte_nav;
+                    }
                 }
             }
         }
@@ -67,7 +71,52 @@ body {
         font-family: $texte_nav;
         margin-bottom: 50px;
 
-        & section {
+        & .link_sections {
+            margin-top: -652px;
+            position: absolute;
+            background: rgb(15,165,51);
+            background: linear-gradient(0deg, rgba(15,165,51,1) 0%, rgba(207,223,3,1) 100%);
+            width: 100%;
+            @include centrer(space-evenly, row);
+            padding: 1% 0;
+
+            & article {
+                @include centrer();
+                width: 30%;
+
+                & div {
+                    width: 100%;
+                    @include centrer();
+                    margin-top: 50px;
+
+                    & h2 {
+                        margin: 0;
+                        color: #313432;
+                    }
+    
+                    & ul {
+                        width: 100%;
+                        list-style: none;
+                        padding: 0;
+                        @include centrer();
+    
+                        & li {
+                            color: white;
+                            width: 100%;
+                            text-align: center;
+                            font-family: $texte_nav;
+                            line-height: 1.5;
+                        }
+                    }
+                }
+            }
+        }
+
+        & #news_hidden {
+            display: none;
+        }
+
+        & #home_page {
             width: 100%;
             @include centrer();
 
