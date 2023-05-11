@@ -1,0 +1,73 @@
+$police: 'Arvo', serif;
+$orange: #F9A02C;
+$orange_active: #FFC368;
+$bg_body: #110011;
+
+@mixin centrer ($justify: center, $direction: column) {
+    display: flex;
+    justify-content: $justify;
+    align-items: center;
+    flex-direction: $direction;
+}
+
+// NORMALISE //
+
+* {
+    box-sizing: border-box;
+    font-family: $police;
+}
+
+// NORMALISE //
+
+
+@media screen and (max-width: 600px) {
+
+body {
+    height: 100vh;
+    margin: 0;
+    @include centrer(start, column);
+    background-color: $bg_body;
+
+    & header {
+        @include centrer();
+        background-color: #1A1A1A;
+        width: 100%;
+
+        & img {
+            width: 20%;
+            padding: 1% 0;
+        }
+
+        & nav {
+            width: 100%;
+
+            & ul {
+                width: 100%;
+                list-style: none;
+                padding: 0;
+                margin: 0;
+
+                & li {
+                    width: 100%;
+                    text-align: center;
+                    background-color: $orange;
+
+                    & a {
+                        @include centrer();
+                        width: 100%;
+                        height: 100%;
+                        padding: 4%;
+                        text-decoration: none;
+                        color: white;
+                    }
+
+                    & a:hover {
+                        background-color: $orange_active;
+                    }
+                }
+            }
+        }
+    }
+}
+
+}
