@@ -20,6 +20,10 @@ $police: 'Londrina Solid', cursive;
 // NORMALISE //
 
 
+#link_plus {
+    color: $pink;
+}
+
 
 @media screen and (max-width: 600px) {
 
@@ -104,23 +108,24 @@ body {
             }
         }
 
+        & h1 {
+            width: 90%;
+            text-align: center;
+            padding: 5%;
+            font-size: 20px;
+            line-height: 2;
+            color: $blue_dark;
+            border-top: dotted 2px $blue;
+            border-left: dotted 2px $blue;
+            border-right: dotted 2px $blue;
+            text-transform: uppercase;
+            margin-top: 50px;
+        }
+
         & section {
             width: 100%;
             @include centrer();
-            margin: 50px 0;
-
-            & h1 {
-                width: 90%;
-                text-align: center;
-                padding: 5%;
-                font-size: 20px;
-                line-height: 2;
-                color: $blue_dark;
-                border-top: dotted 2px $blue;
-                border-left: dotted 2px $blue;
-                border-right: dotted 2px $blue;
-                text-transform: uppercase;
-            }
+            margin-bottom: 50px;
 
             & article {
                 width: 85%;
@@ -252,6 +257,100 @@ body {
                         }
                     }
                 }
+            }
+        }
+
+        & main {
+            @include centrer(start, column);
+            width: 100%;
+    
+            & #barre {
+                width: 100%;
+                height: 70px;
+                margin-top: 10px;
+                @include centrer(start, row);
+    
+                & p {
+                    display: flex;
+                    align-items: center;
+                    padding: 0 10%;
+                    background-color: $pink;
+                    text-transform: uppercase;
+                    color: #FF9EB7;
+                    width: 95%;
+                    height: 100%;
+                    margin: 0;
+                    font-size: 30px;
+                    font-weight: 100;
+                    word-spacing: 5px;
+                }
+    
+                & button {
+                    background-color: $blue;
+                    text-transform: uppercase;
+                    border: none;
+                    width: 5%;
+                    height: 100%;
+                    margin: 0;
+                    font-size: 20px;
+                }
+            }
+    
+            & h1 {
+                width: 85%;
+                text-align: center;
+                padding: 3%;
+                font-size: 25px;
+                line-height: 2;
+                color: $blue_dark;
+                border-top: dotted 3px $blue;
+                border-left: dotted 3px $blue;
+                border-right: dotted 3px $blue;
+                text-transform: uppercase;
+                margin-top: 50px;
+            }
+
+            & section {
+                width: 80%;
+                @include centrer(space-between, row);
+                align-items: baseline;
+                margin-bottom: 50px;
+    
+                & article {
+                    width: 30%;
+                    @include centrer();
+                    padding: 3% 0;
+    
+                    & img {
+                        width: 7%;
+                        padding: 2% 0;
+                    }
+    
+                    & p {
+                        width: 100%;
+                        text-align: center;
+                        border-top: dashed 1px $pink;
+                        color: $blue_dark;
+                        padding: 7% 0;
+                        margin: 0;
+                        font-size: 20px;
+                        text-transform: uppercase;
+    
+                        & span {
+                            color: $pink;
+                            font-weight: 100;
+                        }
+                    }
+    
+                    & #p_facebook {
+                        @include centrer();
+                    }
+                }
+            }
+    
+            & iframe {
+                width: 100%;
+                height: 500px;
             }
         }
     
