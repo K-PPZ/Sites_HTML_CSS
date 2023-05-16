@@ -24,6 +24,10 @@ $police: 'Londrina Solid', cursive;
     color: $pink;
 }
 
+#img_link {
+    filter: invert(7%) sepia(77%) saturate(5913%) hue-rotate(253deg) brightness(80%) contrast(115%);
+}
+
 
 @media screen and (max-width: 600px) {
 
@@ -62,6 +66,7 @@ body {
 
                     & img {
                         width: 15%;
+                        filter: invert(89%) sepia(71%) saturate(1853%) hue-rotate(123deg) brightness(92%) contrast(86%);
                     }
 
                     & a {
@@ -268,6 +273,7 @@ body {
     
                         & img {
                             width: 15%;
+                            filter: invert(89%) sepia(71%) saturate(1853%) hue-rotate(123deg) brightness(92%) contrast(86%);
                         }
     
                         & a {

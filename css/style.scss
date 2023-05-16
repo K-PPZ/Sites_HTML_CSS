@@ -20,11 +20,6 @@ $police: 'Londrina Solid', cursive;
 // NORMALISE //
 
 
-#link_guerre {
-    color: $pink;
-}
-
-
 @media screen and (max-width: 600px) {
 
 body {
@@ -62,6 +57,7 @@ body {
 
                     & img {
                         width: 15%;
+                        filter: invert(89%) sepia(71%) saturate(1853%) hue-rotate(123deg) brightness(92%) contrast(86%);
                     }
 
                     & a {
@@ -266,6 +262,7 @@ body {
     
                         & img {
                             width: 15%;
+                            filter: invert(89%) sepia(71%) saturate(1853%) hue-rotate(123deg) brightness(92%) contrast(86%);
                         }
     
                         & a {

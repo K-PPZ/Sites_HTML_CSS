@@ -20,7 +20,7 @@ $police: 'Londrina Solid', cursive;
 // NORMALISE //
 
 
-#link_moyenage {
+#link_guerre {
     color: $pink;
 }
 
@@ -137,13 +137,12 @@ body {
                     text-transform: uppercase;
                 }
 
-                & img {
+                & iframe {
                     width: 100%;
-                    margin-bottom: 15px;
                 }
 
                 & p {
-                    width: 100%;
+                    width: 90%;
                     text-transform: uppercase;
                     font-weight: 100;
                 }
@@ -151,8 +150,6 @@ body {
         }
 
         & #section_shop {
-            margin-bottom: 20px;
-
             & .articles_shop {
                 border: dotted 1px $blue;
                 text-transform: uppercase;
@@ -349,8 +346,8 @@ body {
                         text-transform: uppercase;
                     }
     
-                    & img {
-                        width: 60%;
+                    & iframe {
+                        width: 100%;
                         margin-bottom: 20px;
                     }
     
