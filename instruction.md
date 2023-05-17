@@ -16,5 +16,3 @@ Découverte du SVG et des transitions CSS
 - nav :
     - texte et icones passent en orange
     - texte et icones descendent de 10px
-
-

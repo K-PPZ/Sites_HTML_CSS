@@ -1,0 +1,24 @@
+$orange: #FF7300;
+$grey: #6A5C6B;
+$title: 'Luckiest Guy', cursive;
+$texte: 'Open Sans', sans-serif;
+
+@mixin centrer ($justify: center, $direction: column) {
+    display: flex;
+    justify-content: $justify;
+    align-items: center;
+    flex-direction: $direction;
+}
+
+// NORMALISE //
+
+* {
+    box-sizing: border-box;
+    font-family: $texte;
+}
+
+h1, h2 {
+    font-family: $title;
+}
+
+// NORMALISE //
