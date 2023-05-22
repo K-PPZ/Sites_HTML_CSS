@@ -32,40 +32,80 @@ body {
 
     & header {
         width: 100%;
+        padding: 3% 10%;
         @include centrer(space-evenly, row);
+        text-transform: uppercase;
 
-        & h1 {
+        & div {
             width: 50%;
-            height: 100%;
-            margin: 0;
             @include centrer(center, row);
+
+            & img {
+                width: 7%;
+            }
+
+            & h1 {
+                padding: 0 1%;
+                height: 100%;
+                margin: 0;
+                font-size: 3rem;
+                color: $grey;
+                @include centrer(center, row);
+            }
         }
 
         & nav {
             width: 50%;
             height: 100%;
+            @include centrer();
 
             & ul {
-                width: 50%;
-                @include centrer(space-between, row);
+                width: 90%;
+                @include centrer(space-evenly, row);
                 list-style: none;
                 padding: 0;
+                margin: 0;
 
                 & li {
-                    width: 20%;
+                    width: 40%;
+                    @include centrer();
 
                     & img {
-                        width: 50%;
+                        width: 15%;
                         filter: invert(58%) sepia(61%) saturate(5061%) hue-rotate(2deg) brightness(103%) contrast(105%);
                     }
 
                     & a {
                         width: 100%;
+                        text-align: center;
                         text-decoration: none;
                         font-family: $title;
+                        font-size: 1rem;
+                        padding: 10% 0;
                         color: $orange;
                     }
                 }
+            }
+        }
+    }
+
+    & main {
+        width: 100%;
+        @include centrer();
+
+        & section {
+            width: 100%;
+            height: 100%;
+
+            & #article_rap {
+                background-image: url(../img/fond.gif);
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+                width: 100%;
+                height: 500px;
+                @include centrer();
+                color: white;
             }
         }
     }
