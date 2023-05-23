@@ -339,5 +339,72 @@ body {
                 }
             }
         }
+
+        & #section_contact {
+            width: 100%;
+            @include centrer();
+            margin-top: 50px;
+
+            & h2 {
+                font-size: 2rem;
+                margin: 0;
+                color: $grey;
+                border-bottom: 10px solid #D1CED2;
+                width: 80%;
+                @include centrer(center, row);
+                padding: 2% 0;
+                text-transform: uppercase;
+            }
+
+            & h2::before {
+                content: "**";
+            }
+
+            & h2::after {
+                content: "**";
+            }
+
+            & p {
+                width: 80%;
+                color: $grey;
+            }
+
+            & form {
+                width: 80%;
+                // @include centrer(center, row);
+
+                & section {
+                    width: 100%;
+                    @include centrer();
+
+                    & #div_name_mail {
+                        width: 100%;
+                        height: 50%;
+                        @include centrer(space-between, row);
+
+                        & div {
+                            width: 49%;
+                            height: 100%;
+                            border: 1px solid $grey;
+                            border-radius: 50px;
+                            padding: 0.5% 0;
+                            @include centrer();
+
+                            & input {
+                                border: none;
+                                background: none;
+                                width: 98%;
+                                height: 100%;
+                                background-image: url(../img/bg_form_mail.svg);
+                                background-repeat: no-repeat;
+                                background-size: 5%;
+                                background-position: left;
+                                padding: 0 7%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }
