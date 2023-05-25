@@ -436,7 +436,7 @@ body {
 
                 & #div_boutons {
                     width: 25%;
-                    margin: 3% 0 1% 0;
+                    margin: 3% 0 2% 0;
                     @include centrer(space-evenly, row);
 
                     & button {
@@ -456,6 +456,23 @@ body {
                     }
                 }
             }
+        }
+    }
+
+    & footer {
+        background-color: $grey;
+        width: 100%;
+        @include centrer(space-evenly, column);
+        color: #CCCCCC;
+        padding: 3% 0 2% 0;
+
+        & img {
+            width: 7%;
+        }
+
+        & small {
+            margin: 1%;
+            font-size: 1rem;
         }
     }
 }
