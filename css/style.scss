@@ -365,8 +365,11 @@ body {
             }
 
             & p {
-                width: 80%;
+                width: 77%;
                 color: $grey;
+                line-height: 2;
+                padding: 2% 0;
+                font-size: 1.2rem;
             }
 
             & form {
@@ -379,7 +382,8 @@ body {
 
                     & #div_name_mail {
                         width: 100%;
-                        height: 45%;
+                        height: 34%;
+                        margin: 1% 0;
                         @include centrer(space-between, row);
 
                         & div {
@@ -387,51 +391,68 @@ body {
                             height: 100%;
                             border: 1px solid $grey;
                             border-radius: 50px;
-                            padding: 0.5% 0;
+                            padding: 0% 0.5%;
                             @include centrer();
 
                             & input {
                                 border: none;
                                 background: none;
-                                width: 98%;
+                                width: 99%;
                                 height: 100%;
                                 background-image: url(../img/bg_form_mail.svg);
                                 background-repeat: no-repeat;
-                                background-size: 5%;
+                                background-size: 7%;
                                 background-position: left;
-                                padding: 0 7%;
+                                padding: 0 10%;
+                                outline: none;
+                                font-size: 1rem;
                             }
                         }
                     }
 
                     & #div_message {
                         width: 100%;
-                        height: 45%;
+                        height: 35%;
                         border: 1px solid $grey;
                         border-radius: 50px;
-                        padding: 0.5% 0.3%;
-                        // @include centrer();
+                        margin: 1% 0;
+                        @include centrer();
 
                         & input {
                             border: none;
                             background: none;
-                            width: 98%;
+                            width: 99%;
                             height: 100%;
                             background-image: url(../img/bg_form_message.svg);
                             background-repeat: no-repeat;
-                            background-size: 2.5%;
+                            background-size: 3.5%;
                             background-position: left;
-                            padding: 0 7%;
+                            padding: 3% 5%;
+                            outline: none;
+                            font-size: 1rem;
                         }
                     }
+                }
 
-                    & #div_boutons {
-                        width: 50%;
+                & #div_boutons {
+                    width: 25%;
+                    margin: 3% 0 1% 0;
+                    @include centrer(space-evenly, row);
 
-                        & button {
-                            border: none;
-                            color: white;
-                        }
+                    & button {
+                        border: none;
+                        color: white;
+                        font-size: 1rem;
+                        padding: 4% 10%;
+                        cursor: pointer;
+                    }
+
+                    & #btn_envoyer {
+                        background-color: #064693;
+                    }
+
+                    & #btn_reset {
+                        background-color: $grey;
                     }
                 }
             }
